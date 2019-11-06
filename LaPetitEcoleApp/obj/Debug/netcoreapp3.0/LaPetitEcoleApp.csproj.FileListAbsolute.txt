@@ -1,0 +1,13 @@
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\LaPetitEcoleApp.exe
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\obj\Debug\netcoreapp3.0\LaPetitEcoleApp.csprojAssemblyReference.cache
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\obj\Debug\netcoreapp3.0\LaPetitEcoleApp.AssemblyInfoInputs.cache
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\obj\Debug\netcoreapp3.0\LaPetitEcoleApp.AssemblyInfo.cs
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\LaPetitEcoleApp.deps.json
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\LaPetitEcoleApp.runtimeconfig.json
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\LaPetitEcoleApp.runtimeconfig.dev.json
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\LaPetitEcoleApp.dll
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\LaPetitEcoleApp.pdb
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\obj\Debug\netcoreapp3.0\LaPetitEcoleApp.csproj.CopyComplete
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\obj\Debug\netcoreapp3.0\LaPetitEcoleApp.dll
+C:\Users\weiba\source\repos\LaPetitEcoleApp.BL\LaPetitEcoleApp\obj\Debug\netcoreapp3.0\LaPetitEcoleApp.pdb

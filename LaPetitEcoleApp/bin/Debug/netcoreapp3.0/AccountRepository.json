@@ -1,0 +1,42 @@
+[
+  {
+    "UserName": "Admin",
+    "Type": "Teacher",
+    "ClassRoom": "Red",
+    "EmailAddress": "admin@gamil.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "Keri",
+    "Type": "Teacher",
+    "ClassRoom": "Red",
+    "EmailAddress": "keri@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "wei",
+    "Type": "Parent",
+    "ClassRoom": "Teal",
+    "EmailAddress": "wei@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "Amy",
+    "Type": "Teacher",
+    "ClassRoom": "Blue",
+    "EmailAddress": "amy@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "Bella",
+    "Type": "Teacher",
+    "ClassRoom": "Teal",
+    "EmailAddress": "bella@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  }
+]
