@@ -56,11 +56,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\weiba\\source\\repos\\LaPetitEcoleApp.BL\\LaPetitEcoleApp\\LaPetitEcoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\weiba\\Desktop\\LaPetitEcoleApp.BL\\LaPetitEcoleApp\\LaPetitEcoleApp.csproj",
       "projectName": "LaPetitEcoleApp",
-      "projectPath": "C:\\Users\\weiba\\source\\repos\\LaPetitEcoleApp.BL\\LaPetitEcoleApp\\LaPetitEcoleApp.csproj",
+      "projectPath": "C:\\Users\\weiba\\Desktop\\LaPetitEcoleApp.BL\\LaPetitEcoleApp\\LaPetitEcoleApp.csproj",
       "packagesPath": "C:\\Users\\weiba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\weiba\\source\\repos\\LaPetitEcoleApp.BL\\LaPetitEcoleApp\\obj\\",
+      "outputPath": "C:\\Users\\weiba\\Desktop\\LaPetitEcoleApp.BL\\LaPetitEcoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\weiba\\AppData\\Roaming\\NuGet\\NuGet.Config",

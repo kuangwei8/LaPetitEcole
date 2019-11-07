@@ -38,5 +38,29 @@
     "EmailAddress": "bella@gmail.com",
     "Password": "1234567",
     "Password2": "1234567"
+  },
+  {
+    "UserName": "radiah",
+    "Type": "Teacher",
+    "ClassRoom": "Blue",
+    "EmailAddress": "r@gamil.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "Simon",
+    "Type": "Parent",
+    "ClassRoom": "Teal",
+    "EmailAddress": "simon@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "elena",
+    "Type": "Parent",
+    "ClassRoom": "Blue",
+    "EmailAddress": "elena@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
   }
 ]

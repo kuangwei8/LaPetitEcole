@@ -14,7 +14,7 @@ namespace LaPetitEcoleApp
         public void Login()
         {
             Console.Clear();
-            Console.WriteLine("Weclom to La Petite Ecole, please login with your email address and password");
+            Console.WriteLine("Weclome to La Petite Ecole, please login with your email address and password");
             Console.WriteLine("Email Address");
             string email = Console.ReadLine().Trim();
             Console.WriteLine("Password");
@@ -22,7 +22,10 @@ namespace LaPetitEcoleApp
             Console.WriteLine("Press 0. To confirm and login");
             ConsoleKeyInfo cki = Console.ReadKey();
 
-            if (cki.KeyChar == '0') verification(email, password);
+            if (cki.KeyChar == '0')
+            {
+                verification(email, password);
+            }
 
         }
 
@@ -49,7 +52,7 @@ namespace LaPetitEcoleApp
                 }
             }
 
-            if (IsValid == true)
+            if (IsValid)
             {
                 Console.Clear();
                 int id = Int32.Parse(accountId);
@@ -57,13 +60,14 @@ namespace LaPetitEcoleApp
                 if(accounts[id].Type == "Teacher")
                 {
                     ClassRoom classRoom = new ClassRoom();
-                    classRoom.viewClass(id); 
+                    classRoom.viewClassasTeacher(id); 
 
                 }
                 if(accounts[id].Type == "Parent")
                 {
-                    ParentClassRoom parentClassRoom = new ParentClassRoom();
-                    parentClassRoom.viewClass(id);
+                    ClassRoom classRoom = new ClassRoom();
+                    classRoom.viewClassasParent(id);
+
                 }
             }
             else

@@ -17,7 +17,8 @@ namespace LaPetitEcoleApp
         public string Activity { get; set; }
         public string Homework { get; set; }
         public string DT { get; set; }  
-        public void viewClass(int id)
+
+        public void viewClassasTeacher(int id)
         {
             string existingJson = File.ReadAllText(AccountFile);
             List<Account> accounts = JsonConvert.DeserializeObject<List<Account>>(existingJson);
@@ -46,14 +47,14 @@ namespace LaPetitEcoleApp
                 }
                 if (cki.KeyChar == '2')
                 {
-                    viewPost();
+                    viewPost(RedRoom);
                 }
 
             }
 
             if(accounts[id].ClassRoom == "Blue")
             {
-                Console.WriteLine("Welcom to the Blue Class Room");
+                Console.WriteLine("Welcome to the Blue Class Room");
                 Console.WriteLine("Press 1 to Post Daily \nPress 2 to View Post");
                 ConsoleKeyInfo cki = Console.ReadKey();
 
@@ -72,15 +73,13 @@ namespace LaPetitEcoleApp
                 }
                 if(cki.KeyChar == '2')
                 {
-                    viewPost();
+                    viewPost(BlueRoom);
                 }
-              
-
             }
 
             if(accounts[id].ClassRoom == "Teal")
             {
-                Console.WriteLine("Welcom to the Teal Class Room");
+                Console.WriteLine("Welcome to the Teal Class Room");
                 Console.WriteLine("Press 1 to Post Daily \nPress 2 to View Post");
                 ConsoleKeyInfo cki = Console.ReadKey();
 
@@ -100,7 +99,7 @@ namespace LaPetitEcoleApp
                 }
                 if(cki.KeyChar == '2')
                 {
-                    viewPost();
+                    viewPost(TealRoom);
                 }
                
             }
@@ -117,19 +116,86 @@ namespace LaPetitEcoleApp
             classRoom.Activity = Console.ReadLine();
             Console.WriteLine("Post Homework");
             classRoom.Homework = Console.ReadLine();
-
-            //Console.WriteLine("Press 0 to confirm and Post");
-            //ConsoleKeyInfo cki = Console.ReadKey();
-
-            //if (cki.KeyChar == '0') 
                 
             return classRoom;
 
         }
 
-        public void viewPost()
+        public void viewClassasParent(int id)
+        {
+            string existingJson = File.ReadAllText(AccountFile);
+            List<Account> accounts = JsonConvert.DeserializeObject<List<Account>>(existingJson);
+
+            Console.WriteLine($"Welcome back {accounts[id].UserName} ");
+
+            if (accounts[id].ClassRoom == "Red")
+            {
+                Console.WriteLine("Welcome to the Red Class Room");
+                Console.WriteLine("Press 1 to view Today's daily");
+                ConsoleKeyInfo cki = Console.ReadKey();
+
+                string redRoomJson = File.ReadAllText(RedRoom);
+                List<ClassRoom> redRoomRepo = JsonConvert.DeserializeObject<List<ClassRoom>>(redRoomJson);
+
+                if (cki.KeyChar == '1')
+                {
+                    viewPost(RedRoom);
+                }
+            }
+
+            if (accounts[id].ClassRoom == "Blue")
+            {
+                Console.WriteLine("Welcome to the Blue Class Room");
+                Console.WriteLine("Press 1 to view Today's daily");
+                ConsoleKeyInfo cki = Console.ReadKey();
+
+                string blueRoomJson = File.ReadAllText(BlueRoom);
+                List<ClassRoom> blueRoomRepo = JsonConvert.DeserializeObject<List<ClassRoom>>(blueRoomJson);
+
+                if (cki.KeyChar == '1')
+                {
+                    viewPost(BlueRoom);
+                }
+
+            }
+
+            if (accounts[id].ClassRoom == "Teal")
+            {
+                Console.WriteLine("Welcome to the Teal Class Room");
+                Console.WriteLine("Press 1 to view Today's daily");
+                ConsoleKeyInfo cki = Console.ReadKey();
+
+                string tealRoomJson = File.ReadAllText(TealRoom);
+                List<ClassRoom> tealRoomRepo = JsonConvert.DeserializeObject<List<ClassRoom>>(tealRoomJson);
+
+                if (cki.KeyChar == '1')
+                {
+                    viewPost(TealRoom);
+                }
+
+            }
+
+        }
+
+        public void viewPost(string room)
+        {
+            Console.Clear();
+            using (StreamReader r = new StreamReader(room))
+            {
+                string json = r.ReadToEnd();
+                List<ClassRoom> classRooms = JsonConvert.DeserializeObject<List<ClassRoom>>(json);
+                Console.WriteLine(classRooms[classRooms.Count-1].GetDaily());
+            }
+            
+        }
+
+        public string GetDaily()
         {
 
+            return  $"Here is a Peek into our day at school \n" +
+                $"Lunch: {this.Lunch} \n" +
+                $"Activity: {this.Activity} \n" +
+                $"Homework: {this.Homework}";
         }
     }
 }
