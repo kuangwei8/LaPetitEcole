@@ -23,7 +23,14 @@ namespace LaPetitEcoleApp
         public void GenerateAccount()
         {
             Console.Clear();
-            Console.WriteLine("Create your Account with La Petite Ecole");
+            string title = @"
+                                                     _                    _              
+     \    / _  |  _  _  ._ _   _   _|_  _   |   _.  |_) _ _|_ o _|_  _   |_  _  _  |  _  
+      \/\/ (/_ | (_ (_) | | | (/_   |_ (_)  |_ (_|  |  (/_ |_ |  |_ (/_  |_ (_ (_) | (/_                                                                                   
+";
+            Console.WriteLine(title);
+            string message = "Create your Account with La Petite Ecole";
+            Console.WriteLine(message.PadLeft(message.Length + 20));
 
             Account account = new Account();
 
@@ -31,9 +38,9 @@ namespace LaPetitEcoleApp
             account.UserName = Console.ReadLine();
 
             Console.WriteLine("-Press 1 to Create Teacher Account \n-Press 2 to Create Parent Account");
-            ConsoleKeyInfo cki = Console.ReadKey();
-            if (cki.KeyChar == '1') account.Type = "Teacher";
-            else if (cki.KeyChar == '2') account.Type = "Parent";
+            ConsoleKeyInfo cki1 = Console.ReadKey();
+            if (cki1.KeyChar == '1') account.Type = "Teacher";
+            else if (cki1.KeyChar == '2') account.Type = "Parent";
             else
             {
                 Console.Beep();

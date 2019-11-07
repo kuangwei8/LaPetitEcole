@@ -38,21 +38,33 @@ namespace LaPetitEcoleApp
                 if (cki.KeyChar == '1')
                 {
                     redRoomRepo.Add(createDaily());
-                    string output = JsonConvert.SerializeObject(redRoomRepo, Formatting.Indented);
-                    using (var tw = new StreamWriter(RedRoom, append: false))
+                    Console.WriteLine("Press 0 to Post and return to the previous page");
+                    ConsoleKeyInfo cki1 = Console.ReadKey(); 
+                    if(cki1.KeyChar == '0')
                     {
-                        tw.WriteLine(output);
-                        tw.Close();
+                        string output = JsonConvert.SerializeObject(redRoomRepo, Formatting.Indented);
+                        using (var tw = new StreamWriter(RedRoom, append: false))
+                        {
+                            tw.WriteLine(output);
+                            tw.Close();
+                        }
+                        Console.Clear();
+                        viewClassasTeacher(id);
                     }
                 }
                 if (cki.KeyChar == '2')
                 {
                     viewPost(RedRoom);
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to go back to the previous page");
+                    Console.ReadKey();
+                    Console.Clear();
+                    viewClassasTeacher(id);
                 }
 
             }
 
-            if(accounts[id].ClassRoom == "Blue")
+            if (accounts[id].ClassRoom == "Blue")
             {
                 Console.WriteLine("Welcome to the Blue Class Room");
                 Console.WriteLine("Press 1 to Post Daily \nPress 2 to View Post");
@@ -61,21 +73,35 @@ namespace LaPetitEcoleApp
                 string blueRoomJson = File.ReadAllText(BlueRoom);
                 List<ClassRoom> blueRoomRepo = JsonConvert.DeserializeObject<List<ClassRoom>>(blueRoomJson);
 
-                if(cki.KeyChar == '1')
+                if (cki.KeyChar == '1')
                 {
                     blueRoomRepo.Add(createDaily());
-                    string output = JsonConvert.SerializeObject(blueRoomRepo, Formatting.Indented); ;
-                    using (var tw = new StreamWriter(BlueRoom, append: false))
+                    Console.WriteLine("Press 0 to Post and return to the previous page");
+                    ConsoleKeyInfo cki1 = Console.ReadKey();
+                    if (cki1.KeyChar == '0')
                     {
-                        tw.WriteLine(output);
-                        tw.Close();
+                        string output = JsonConvert.SerializeObject(blueRoomRepo, Formatting.Indented);
+                        using (var tw = new StreamWriter(BlueRoom, append: false))
+                        {
+                            tw.WriteLine(output);
+                            tw.Close();
+                        }
+                        Console.Clear();
+                        viewClassasTeacher(id);
                     }
                 }
-                if(cki.KeyChar == '2')
+                if (cki.KeyChar == '2')
                 {
-                    viewPost(BlueRoom);
+                    viewPost(RedRoom);
+                    Console.WriteLine("Press any key to go back to the previous page");
+                    Console.WriteLine();
+                    Console.ReadKey();
+                    Console.Clear(); 
+                    viewClassasTeacher(id);
                 }
+
             }
+
 
             if(accounts[id].ClassRoom == "Teal")
             {
@@ -89,17 +115,30 @@ namespace LaPetitEcoleApp
                 if(cki.KeyChar == '1')
                 {
                     tealRoomRepo.Add(createDaily());
-                    string output = JsonConvert.SerializeObject(tealRoomRepo, Formatting.Indented);
-                    using (var tw = new StreamWriter(TealRoom, append: false))
+                    Console.WriteLine("Press 0 to Post and return to the previous page");
+                    ConsoleKeyInfo cki1 = Console.ReadKey();
+
+                    if (cki1.KeyChar == '0')
                     {
-                        tw.WriteLine(output);
-                        tw.Close();
+                        string output = JsonConvert.SerializeObject(tealRoomRepo, Formatting.Indented);
+                        using (var tw = new StreamWriter(TealRoom, append: false))
+                        {
+                            tw.WriteLine(output);
+                            tw.Close();
+                        }
+                        Console.Clear();
+                        viewClassasTeacher(id);
                     }
 
                 }
                 if(cki.KeyChar == '2')
                 {
                     viewPost(TealRoom);
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to go back to the previous page");
+                    Console.ReadKey();
+                    Console.Clear();
+                    viewClassasTeacher(id);
                 }
                
             }
@@ -108,6 +147,7 @@ namespace LaPetitEcoleApp
 
         public ClassRoom createDaily()
         {
+            Console.Clear(); 
             ClassRoom classRoom = new ClassRoom();
             classRoom.DT = DateTime.Today.ToShortDateString();
             Console.WriteLine("Post Lunch");
@@ -140,6 +180,11 @@ namespace LaPetitEcoleApp
                 if (cki.KeyChar == '1')
                 {
                     viewPost(RedRoom);
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to go back to the previous page");
+                    Console.ReadKey();
+                    Console.Clear();
+                    viewClassasParent(id); 
                 }
             }
 
@@ -155,6 +200,11 @@ namespace LaPetitEcoleApp
                 if (cki.KeyChar == '1')
                 {
                     viewPost(BlueRoom);
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to go back to the previous page");
+                    Console.ReadKey();
+                    Console.Clear(); 
+                    viewClassasParent(id);
                 }
 
             }
@@ -171,10 +221,13 @@ namespace LaPetitEcoleApp
                 if (cki.KeyChar == '1')
                 {
                     viewPost(TealRoom);
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to go back to the previous page");
+                    Console.ReadKey();
+                    Console.Clear(); 
+                    viewClassasParent(id);
                 }
-
             }
-
         }
 
         public void viewPost(string room)
@@ -186,12 +239,10 @@ namespace LaPetitEcoleApp
                 List<ClassRoom> classRooms = JsonConvert.DeserializeObject<List<ClassRoom>>(json);
                 Console.WriteLine(classRooms[classRooms.Count-1].GetDaily());
             }
-            
         }
 
         public string GetDaily()
         {
-
             return  $"Here is a Peek into our day at school \n" +
                 $"Lunch: {this.Lunch} \n" +
                 $"Activity: {this.Activity} \n" +

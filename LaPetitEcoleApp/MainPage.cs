@@ -10,22 +10,28 @@ namespace LaPetitEcoleApp
         {
             Console.Title = "Welcome";
             string title = @"
-              .__                               
-__  _  __ ____ |  |   ____  ____   _____   ____  
-\ \/ \/ // __ \|  | _/ ___\/  _ \ /     \_/ __ \ 
- \     /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/ 
-  \/\_/  \___  >____/\___  >____/|__|_|  /\___  >
-             \/          \/            \/     \/ 
+                               .__                               
+                __  _  __ ____ |  |   ____  ____   _____   ____  
+                \ \/ \/ // __ \|  | _/ ___\/  _ \ /     \_/ __ \ 
+                 \     /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/ 
+                  \/\_/  \___  >____/\___  >____/|__|_|  /\___  >
+                             \/          \/            \/     \/ 
 ";
+         
             Console.ForegroundColor = ConsoleColor.Yellow;
+
             Console.WriteLine(title, Console.ForegroundColor);
-            Console.WriteLine("Welcome to La Petite Ecole Montreal");
-            Console.WriteLine("Press 1 to Login");
-            Console.WriteLine("Press 2 to Create New Account");
-            Console.WriteLine("Press any other key to exit");
-
+            string message = "Welcome to La Petite Ecole Montreal";
+            Console.WriteLine(message.PadLeft(message.Length+25));
+            Console.WriteLine();
+            string message1 = "Press 1 to Login";
+            string message2 = "Press 2 to Create New Account"; 
+            Console.WriteLine(message1.PadLeft(message1.Length+10));
+            Console.WriteLine(message2.PadLeft(message2.Length+10)); 
+            string message3 = "Press any other key to exit";
+            Console.WriteLine(message3.PadLeft(message3.Length+10));
+         
             ConsoleKeyInfo cki = Console.ReadKey();
-
 
             if (cki.KeyChar == '1')
             {
@@ -39,7 +45,11 @@ __  _  __ ____ |  |   ____  ____   _____   ____
                 account.GenerateAccount();
             }
 
-
         }
+
+    
+
+       
+    
     }
 }

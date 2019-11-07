@@ -62,5 +62,13 @@
     "EmailAddress": "elena@gmail.com",
     "Password": "1234567",
     "Password2": "1234567"
+  },
+  {
+    "UserName": "jing",
+    "Type": "Parent",
+    "ClassRoom": "Blue",
+    "EmailAddress": "jing@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
   }
 ]

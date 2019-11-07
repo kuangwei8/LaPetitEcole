@@ -14,10 +14,22 @@ namespace LaPetitEcoleApp
         public void Login()
         {
             Console.Clear();
-            Console.WriteLine("Weclome to La Petite Ecole, please login with your email address and password");
-            Console.WriteLine("Email Address");
+            string title = @"
+
+                                                     _                    _              
+     \    / _  |  _  _  ._ _   _   _|_  _   |   _.  |_) _ _|_ o _|_  _   |_  _  _  |  _  
+      \/\/ (/_ | (_ (_) | | | (/_   |_ (_)  |_ (_|  |  (/_ |_ |  |_ (/_  |_ (_ (_) | (/_                                                                                   
+";
+            Console.WriteLine(title);
+            string message1 = "please login with your email address and password";
+            Console.WriteLine(message1.PadLeft(message1.Length+20));
+            Console.WriteLine();
+
+            string message2 = "Email Address"; 
+            Console.WriteLine(message2);
             string email = Console.ReadLine().Trim();
-            Console.WriteLine("Password");
+            string message3 = "Password";
+            Console.WriteLine(message3);
             string password = Console.ReadLine().Trim();
             Console.WriteLine("Press 0. To confirm and login");
             ConsoleKeyInfo cki = Console.ReadKey();
@@ -73,9 +85,18 @@ namespace LaPetitEcoleApp
             else
             {
                 Console.Clear();
-                Console.WriteLine("Invalid Email or Password, Please try again");
-                Console.ReadLine();
-                Login();
+                string message = "Invalid Email or Password, Please try again";
+                string message1 = "Press 0 to go back";
+                Console.WriteLine(message.PadLeft(message.Length+20));
+                Console.WriteLine(message1.PadLeft(message1.Length+30));
+                ConsoleKeyInfo cki = Console.ReadKey(); 
+
+                if(cki.KeyChar == '0')
+                {
+                    Login();
+                }
+                
+                
             }
 
         }
