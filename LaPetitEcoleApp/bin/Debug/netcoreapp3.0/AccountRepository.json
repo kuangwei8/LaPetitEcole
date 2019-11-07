@@ -70,5 +70,21 @@
     "EmailAddress": "jing@gmail.com",
     "Password": "1234567",
     "Password2": "1234567"
+  },
+  {
+    "UserName": "wei",
+    "Type": "Teacher",
+    "ClassRoom": "Teal",
+    "EmailAddress": "wei@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
+  },
+  {
+    "UserName": "wei",
+    "Type": "Teacher",
+    "ClassRoom": "Teal",
+    "EmailAddress": "wei@gmail.com",
+    "Password": "1234567",
+    "Password2": "1234567"
   }
 ]

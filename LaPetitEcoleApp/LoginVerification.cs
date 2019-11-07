@@ -15,13 +15,12 @@ namespace LaPetitEcoleApp
         {
             Console.Clear();
             string title = @"
-
                                                      _                    _              
      \    / _  |  _  _  ._ _   _   _|_  _   |   _.  |_) _ _|_ o _|_  _   |_  _  _  |  _  
       \/\/ (/_ | (_ (_) | | | (/_   |_ (_)  |_ (_|  |  (/_ |_ |  |_ (/_  |_ (_ (_) | (/_                                                                                   
 ";
             Console.WriteLine(title);
-            string message1 = "please login with your email address and password";
+            string message1 = "Please login with your email address and password";
             Console.WriteLine(message1.PadLeft(message1.Length+20));
             Console.WriteLine();
 
@@ -95,8 +94,7 @@ namespace LaPetitEcoleApp
                 {
                     Login();
                 }
-                
-                
+ 
             }
 
         }

@@ -17,10 +17,8 @@ namespace LaPetitEcoleApp
                   \/\_/  \___  >____/\___  >____/|__|_|  /\___  >
                              \/          \/            \/     \/ 
 ";
-         
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            Console.WriteLine(title, Console.ForegroundColor);
+            
+            Console.WriteLine(title);
             string message = "Welcome to La Petite Ecole Montreal";
             Console.WriteLine(message.PadLeft(message.Length+25));
             Console.WriteLine();
@@ -45,11 +43,7 @@ namespace LaPetitEcoleApp
                 account.GenerateAccount();
             }
 
-        }
-
-    
-
-       
+        } 
     
     }
 }

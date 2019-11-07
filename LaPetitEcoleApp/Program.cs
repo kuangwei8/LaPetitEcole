@@ -11,10 +11,13 @@ namespace LaPetitEcoleApp
             Console.SetWindowSize(100, 30);
             Console.SetWindowSize(100, 30);
             Console.SetWindowSize(100, 30);
-            Console.BackgroundColor = ConsoleColor.DarkGray;
+            Console.CursorSize = 100;
+            Console.CursorVisible = true; 
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Clear();
             
-            //Console.CursorVisible = true; 
+        
             MainPage mainPage = new MainPage();
             mainPage.homePage();
         }
